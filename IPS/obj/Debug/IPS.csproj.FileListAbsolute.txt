@@ -1,0 +1,13 @@
+C:\Users\Sharoll Araujo\source\repos\IPS\IPS\obj\Debug\IPS.csprojAssemblyReference.cache
+C:\Users\Sharoll Araujo\source\repos\IPS\IPS\bin\Debug\IPS.exe.config
+C:\Users\Sharoll Araujo\source\repos\IPS\IPS\bin\Debug\IPS.exe
+C:\Users\Sharoll Araujo\source\repos\IPS\IPS\bin\Debug\IPS.pdb
+C:\Users\Sharoll Araujo\source\repos\IPS\IPS\bin\Debug\BLL.dll
+C:\Users\Sharoll Araujo\source\repos\IPS\IPS\bin\Debug\ENTITY.dll
+C:\Users\Sharoll Araujo\source\repos\IPS\IPS\bin\Debug\DAL.dll
+C:\Users\Sharoll Araujo\source\repos\IPS\IPS\bin\Debug\BLL.pdb
+C:\Users\Sharoll Araujo\source\repos\IPS\IPS\bin\Debug\ENTITY.pdb
+C:\Users\Sharoll Araujo\source\repos\IPS\IPS\bin\Debug\DAL.pdb
+C:\Users\Sharoll Araujo\source\repos\IPS\IPS\obj\Debug\IPS.csproj.CopyComplete
+C:\Users\Sharoll Araujo\source\repos\IPS\IPS\obj\Debug\IPS.exe
+C:\Users\Sharoll Araujo\source\repos\IPS\IPS\obj\Debug\IPS.pdb
