@@ -10,6 +10,8 @@ namespace ENTITY
     {
         public string NumeroLiquidacion { get; set; }
         public string IdentificacionPaciente { get; set; }
+        public string Nombre { get; set; }
+        public DateTime Fecha { get; set; }
         public string TipoAfiliacion { get; set; }
         public decimal SalarioDevengado { get; set; }
         public decimal ValorServicio { get; set; }

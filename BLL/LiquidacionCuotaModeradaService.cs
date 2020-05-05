@@ -17,9 +17,18 @@ namespace BLL
             liquidacionCuotaModeradaRepository = new LiquidacionCuotaModeradaRepository();
         }
 
-        public void Guardar (LiquidacionCuotaModerada liquidacionCuotaModerada)
+        public string  Guardar (LiquidacionCuotaModerada liquidacionCuotaModerada)
         {
-            liquidacionCuotaModeradaRepository.Guardar(liquidacionCuotaModerada);
+            try
+            {
+                liquidacionCuotaModeradaRepository.Guardar(liquidacionCuotaModerada);
+                return "Se guardaron los datos satisfactoriamente. ";
+            }
+            catch (Exception e)
+            {
+                return $"Error de la Aplicación: {e.Message}";
+            }
+           
         }
 
         public List <LiquidacionCuotaModerada> Consultar()
@@ -27,18 +36,100 @@ namespace BLL
             return liquidacionCuotaModeradaRepository.Consultar();
         }
 
-        public void Eliminar(string numeroLiquidacion)
+        public string  Eliminar(string numeroLiquidacion)
         {
-            liquidacionCuotaModeradaRepository.Eliminar(numeroLiquidacion);
+            try
+            {
+                liquidacionCuotaModeradaRepository.Eliminar(numeroLiquidacion);
+                return "Se eliminaron los datos satisfactoriamente. ";
+
+            }catch (Exception e)
+
+            {
+                return $"Error de la Aplicación: {e.Message}";
+            }
+            
         }
 
-        public void Modificar(LiquidacionCuotaModerada liquidacionCuotaModerada)
+        public string  Modificar(LiquidacionCuotaModerada liquidacionCuotaModerada)
         {
-            liquidacionCuotaModeradaRepository.Modificar(liquidacionCuotaModerada);
+            try
+            {
+                liquidacionCuotaModeradaRepository.Modificar(liquidacionCuotaModerada);
+                return "Se modificaron los datos satisfactoriamente. ";
+
+            }
+            catch (Exception e)
+
+            {
+                return $"Error de la Aplicación: {e.Message}";
+            }
+            
         }
+
         public LiquidacionCuotaModerada ConsultarIndividual(string numeroLiquidacion)
         {
             return liquidacionCuotaModeradaRepository.ConsultarIndividual(numeroLiquidacion);
+        }
+
+        public List<LiquidacionCuotaModerada> ConsultarContributivo()
+        {
+            return liquidacionCuotaModeradaRepository.ConsultarContributivo();
+        }
+
+        public List<LiquidacionCuotaModerada> ConsultarSubsidiado()
+        {
+            return liquidacionCuotaModeradaRepository.ConsultarSubsidiado();
+        }
+
+        public int TotalizarLiquidaciones()
+        {
+            return liquidacionCuotaModeradaRepository.TotalizarLiquidaciones();
+        }
+
+        public int TotalizarLiquidacionesContributivas()
+        {
+            return liquidacionCuotaModeradaRepository.TotalizarLiquidacionesContributivas();
+        }
+
+        public int TotalizarLiquidacionesSubsidiadas()
+        {
+            return liquidacionCuotaModeradaRepository.TotalizarLiquidacionesSubsidiadas();
+        }
+
+        public decimal ValorTotalCuotasModeradas()
+        {
+            return liquidacionCuotaModeradaRepository.ValorTotalCuotasModeradas();
+        }
+
+        public decimal ValorTotalRegimenSubsidiado()
+        {
+            return liquidacionCuotaModeradaRepository.ValorTotalRegimenSubsidiado();
+        }
+
+        public decimal ValorTotalRegimenContributivo()
+        {
+            return liquidacionCuotaModeradaRepository.ValorTotalRegimenContributivo();
+        }
+
+        public IList<LiquidacionCuotaModerada> ConsultarFecha(DateTime FechaInicial, DateTime FechaFinal)
+        {
+            return liquidacionCuotaModeradaRepository.ConsultarFecha(FechaInicial, FechaFinal);
+        }
+
+        public int TotalCantidadFecha(DateTime FechaInicial, DateTime FechaFinal)
+        {
+            return liquidacionCuotaModeradaRepository.TotalCantidadFecha(FechaInicial,FechaFinal);
+        }
+
+        public decimal TotalValorFecha(DateTime FechaInicial, DateTime FechaFinal)
+        {
+            return liquidacionCuotaModeradaRepository.TotalValorFecha(FechaInicial, FechaFinal);
+        }
+
+        public IList<LiquidacionCuotaModerada> BuscarNombre (string Letras)
+        {
+            return liquidacionCuotaModeradaRepository.BuscarNombre(Letras);
         }
     }
 }
